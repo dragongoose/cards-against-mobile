@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/remixicon/remixicon.css">
+        <title>Hello World</title>
+    </head>
+    <body class="bg-white dark:bg-black">
+      <div class="bg-none p-4 mb-10">
+        <div class="float-right space-x-2">
+          <button><i class="ri-user-fill text-4xl"></i></button>
+          <button><i class="ri-settings-3-fill text-4xl"></i></button>
+        </div>
+      </div>
+
+      <main id="main-menu" class="p-8">
+        <h1 class="font-bold text-5xl mt-16 table-caption">Cards Against</h1>
+        <h1 id="typewriterText" class="font-bold text-5xl typewriter"></h1>
+        
+        <div class="text-center font-bold text-xl space-y-5 absolute bottom-24 inset-x-0">
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">play online</button>
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">decks</button>
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">help</button>
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full" onclick="location.href = '#about'">about</button>
+        </div>
+      </main>
+
+      <content id="about" style="display: none;" class="p-8">
+        <h1 class="font-bold text-5xl text-center">About</h1>
+        
+        <div class="text-center font-bold text-xl space-y-5 absolute bottom-24 inset-x-0">
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full" onclick="location.href = '#'">back</button>
+        </div> 
+        
+      </content>
+
+      <content id="">
+        
+      </content>
+
+      <script src="js/index.js"></script>
+      <script src="js/typewriter.js"></script>
+    </body>
+</html>

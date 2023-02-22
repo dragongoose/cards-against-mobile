@@ -1,0 +1,32 @@
+{
+  "name": "io.cordova.hellocordova",
+  "displayName": "HelloCordova",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./www/css/input.css -o ./www/css/style.css",
+    "watch:build": "npm run build:css; cordova run browser"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^10.1.2",
+    "cordova-browser": "^6.0.0"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ]
+  },
+  "dependencies": {
+    "iconoir": "^6.2.1",
+    "remixicon": "^2.5.0",
+    "tailwindcss": "^3.2.7"
+  }
+}
