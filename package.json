@@ -1,13 +1,13 @@
 {
-  "name": "io.cordova.hellocordova",
-  "displayName": "HelloCordova",
+  "name": "Cards Against _____",
+  "displayName": "Cards Against Mobile",
   "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "description": "FOSS Cards Against Humanity",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "npx tailwindcss -i ./www/css/input.css -o ./www/css/style.css",
-    "watch:build": "npm run build:css; cordova run browser"
+    "test": "npm run build:css; cordova run browser"
+    "build": "cordova build android --prod"
   },
   "keywords": [
     "ecosystem:cordova"
