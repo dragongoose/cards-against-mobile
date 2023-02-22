@@ -1,5 +1,5 @@
 const mainScreen = document.getElementById('main-menu')
-let screensToFollow = ['main-menu', 'about']
+let screensToFollow = ['main-menu', 'about', 'play']
 
 window.addEventListener('hashchange', (data) => {
   const newHash = data.newURL.split('#')[1]
@@ -7,7 +7,7 @@ window.addEventListener('hashchange', (data) => {
 
   if(!newScreen) {
     for (const screenName of screensToFollow) {
-      toggleVisibility(screenName)
+      setVisibility(screenName, false)
     }
 
     mainScreen.style.display = 'block'
@@ -19,14 +19,14 @@ window.addEventListener('hashchange', (data) => {
   newScreen.style.display = 'block'
 })
 
-function toggleVisibility(screenName) {
+function setVisibility(screenName, visibilityBool) {
   const screen = document.getElementById(screenName)
   if(!screen) return;
   
-  if (screen.style.display === 'block') {
-    screen.style.display = 'none'
-  } else {
+  if (visibilityBool) {
     screen.style.display = 'block'
+  } else {
+    screen.style.display = 'none'
   }
 }
 

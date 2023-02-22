@@ -38,22 +38,24 @@
         <title>Hello World</title>
     </head>
     <body class="bg-white dark:bg-black">
-      <div class="bg-none p-4 mb-10">
-        <div class="float-right space-x-2">
-          <button><i class="ri-user-fill text-4xl"></i></button>
-          <button><i class="ri-settings-3-fill text-4xl"></i></button>
-        </div>
-      </div>
-
-      <main id="main-menu" class="p-8">
-        <h1 class="font-bold text-5xl mt-16 table-caption">Cards Against</h1>
-        <h1 id="typewriterText" class="font-bold text-5xl typewriter"></h1>
+      <main id="main-menu">
+        <nav class="bg-none p-4 mb-10">
+          <div class="float-right space-x-2">
+            <button><i class="ri-user-fill text-4xl"></i></button>
+            <button><i class="ri-settings-3-fill text-4xl"></i></button>
+          </div>
+        </nav>
         
-        <div class="text-center font-bold text-xl space-y-5 absolute bottom-24 inset-x-0">
-          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">play online</button>
-          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">decks</button>
-          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">help</button>
-          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full" onclick="location.href = '#about'">about</button>
+        <div class="p-8">
+          <h1 class="font-bold text-5xl mt-16 table-caption">Cards Against</h1>
+          <h1 id="typewriterText" class="font-bold text-5xl typewriter"></h1>
+          
+          <div class="text-center font-bold text-xl space-y-5 absolute bottom-24 inset-x-0">
+            <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full" onclick="location.href = '#play'">play online</button>
+            <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">decks</button>
+            <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">help</button>
+            <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full" onclick="location.href = '#about'">about</button>
+          </div>
         </div>
       </main>
 
@@ -66,8 +68,24 @@
         
       </content>
 
-      <content id="">
-        
+      <content id="play" style="display: none;" class="p-8">
+        <h1 class="font-bold text-5xl text-center">Play</h1>
+
+        <div class="font-bold text-xl absolute inset-x-0 bottom-1/2">
+          <div class="relative z-0 mb-2">
+            <input type="text" id="floating_standard" class="w-4/5 mx-auto block border-0 border-b-4 border-black bg-transparent py-2.5 px-0 text-sm text-black focus:outline-none dark:border-white dark:text-white dark:focus:border-blue-500 placeholder-black dark:placeholder-white" placeholder="Party code" />
+          </div>
+
+          <div class="text-center inset-x-0">
+            <button class="w-4/5 p-3 bg-black text-center text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">play</button>
+          </div>
+        </div>
+
+        <div class="text-center font-bold text-xl space-y-5 absolute bottom-24 inset-x-0"> 
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">join random party</button>
+          <button class="w-4/5 p-3 bg-black text-white dark:bg-white dark:text-black hover:bg-gray-500 rounded-full">create new party</button>
+        </div> 
+
       </content>
 
       <script src="js/index.js"></script>
